@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>BANANA PUNCH WAR</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+  body {
+    margin: 0;
+    background: #000;
+    font-family: monospace;
+    color: #fff;
+    padding: 30px;
+  }
+
+  .window {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .title {
+    font-size: 80px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: #7CFF5A;
+    font-family: monospace;
+  }
+
+  .sub {
+    margin-top: 10px;
+    color: #cfcfcf;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  .status {
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .dot {
+    height: 10px;
+    width: 10px;
+    background-color: #7CFF5A;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 6px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 25px;
+  }
+
+  .card {
+    background: #111;
+    padding: 8px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 6px;
+  }
+
+  .label {
+    color: #9a9a9a;
+    font-size: 13px;
+  }
+
+  footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    font-size: 14px;
+    color: #9a9a9a;
+    border-top: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .contract-box {
+    background: #111;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-family: monospace;
+  }
+
+  .copy-btn {
+    padding: 6px 14px;
+    margin-left: 10px;
+    background: #7CFF5A;
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+</style>
+</head>
+
+<body>
+<div class="window">
+
+  <div class="title">BANANA PUNCH WAR</div>
+
+  <div class="sub">
+    boot sequence: OK<br>
+    secure channel established<br>
+    loading soldiers...
+  </div>
+
+  <div class="status">STATUS: OPERATIONAL <span class="dot"></span></div>
+
+  <!-- IMAGE GRID -->
+  <div class="grid">
+
+    <!-- SAMPLE IMAGES -->
+    <div class="card">
+      <img src="https://placehold.co/300x300/yellow/black?text=banana01">
+      <div class="label">unit_01</div>
+    </div>
+
+    <div class="card">
+      <img src="https://placehold.co/300x300/yellow/black?text=banana02">
+      <div class="label">unit_02</div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div>
+      *contract address*: 
+      <span class="contract-box" id="contract">
+        11111111111111111111111111111111111111111111
+      </span>
+      <button class="copy-btn" onclick="copyContract()">copy</button>
+    </div>
+
+    <div>CLASSIFIED – $BANANA</div>
+  </footer>
+
+</div>
+
+<script>
+function copyContract() {
+  const text = document.getElementById("contract").innerText;
+  navigator.clipboard.writeText(text);
+  alert("Contract copied!");
+}
+</script>
+
+</body>
+</html>
